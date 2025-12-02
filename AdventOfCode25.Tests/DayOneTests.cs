@@ -47,11 +47,8 @@ public class DayOneTests
     {
         int currentPosition = StartingPosition;
         currentPosition = _dayOne.GetNewDialPointerValue("R49", currentPosition);
-        int counter = _dayOne.GetResults();
         currentPosition = _dayOne.GetNewDialPointerValue("R1", currentPosition);
-        counter = _dayOne.GetResults();
-        currentPosition = _dayOne.GetNewDialPointerValue("L1", currentPosition);
-        counter = _dayOne.GetResults();
+        _ = _dayOne.GetNewDialPointerValue("L1", currentPosition);
         Assert.That(_dayOne.GetResults(), Is.EqualTo(1));
     }
 
@@ -60,9 +57,7 @@ public class DayOneTests
     {
         int currentPosition = StartingPosition;
         currentPosition = _dayOne.GetNewDialPointerValue("L50", currentPosition);
-        int counter = _dayOne.GetResults(); 
         _ = _dayOne.GetNewDialPointerValue("L100", currentPosition);
-        counter = _dayOne.GetResults();
         Assert.That(_dayOne.GetResults(), Is.EqualTo(2));
     }
     
