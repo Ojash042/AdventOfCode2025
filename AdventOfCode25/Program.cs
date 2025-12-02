@@ -1,4 +1,4 @@
-﻿using AdventOfCode25.SecondDay;
+﻿using AdventOfCode25.Solutions.SecondDay;
 
 namespace AdventOfCode25;
 

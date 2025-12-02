@@ -1,6 +1,7 @@
-﻿namespace AdventOfCode25.Tests;
+﻿using AdventOfCode25.Solutions.FirstDay;
 
-using FirstDay;
+namespace AdventOfCode25.Tests;
+
 public class DayOneTests
 {
     private DayOne _dayOne;

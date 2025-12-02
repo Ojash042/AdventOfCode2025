@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 
-namespace AdventOfCode25.FirstDay;
+namespace AdventOfCode25.Solutions.FirstDay;
 
 public record DayOneInput(string Document, int StartingPosition);
 
