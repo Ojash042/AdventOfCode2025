@@ -20,7 +20,7 @@ public class DayOneTests
         int currentPosition = StartingPosition;
         currentPosition = _dayOne.GetNewDialPointerValue("R49", currentPosition);
         _ = _dayOne.GetNewDialPointerValue("L98", currentPosition);
-        Assert.That(_dayOne.GetCounter(), Is.EqualTo(0));
+        Assert.That(_dayOne.GetResults(), Is.EqualTo(0));
     }
 
     [Test]
@@ -29,7 +29,7 @@ public class DayOneTests
         int currentPosition = StartingPosition;
         currentPosition = _dayOne.GetNewDialPointerValue("R49", currentPosition);
         _ = _dayOne.GetNewDialPointerValue("R1", currentPosition);
-        Assert.That(_dayOne.GetCounter(), Is.EqualTo(1));
+        Assert.That(_dayOne.GetResults(), Is.EqualTo(1));
     }
 
     [Test]
@@ -39,7 +39,7 @@ public class DayOneTests
         currentPosition = _dayOne.GetNewDialPointerValue("R49", currentPosition);
         currentPosition = _dayOne.GetNewDialPointerValue("R1", currentPosition);
         _ = _dayOne.GetNewDialPointerValue("R1", currentPosition);
-        Assert.That(_dayOne.GetCounter(), Is.EqualTo(1));
+        Assert.That(_dayOne.GetResults(), Is.EqualTo(1));
     }
     
     [Test]
@@ -47,12 +47,12 @@ public class DayOneTests
     {
         int currentPosition = StartingPosition;
         currentPosition = _dayOne.GetNewDialPointerValue("R49", currentPosition);
-        int counter = _dayOne.GetCounter();
+        int counter = _dayOne.GetResults();
         currentPosition = _dayOne.GetNewDialPointerValue("R1", currentPosition);
-        counter = _dayOne.GetCounter();
+        counter = _dayOne.GetResults();
         currentPosition = _dayOne.GetNewDialPointerValue("L1", currentPosition);
-        counter = _dayOne.GetCounter();
-        Assert.That(_dayOne.GetCounter(), Is.EqualTo(1));
+        counter = _dayOne.GetResults();
+        Assert.That(_dayOne.GetResults(), Is.EqualTo(1));
     }
 
     [Test]
@@ -60,10 +60,10 @@ public class DayOneTests
     {
         int currentPosition = StartingPosition;
         currentPosition = _dayOne.GetNewDialPointerValue("L50", currentPosition);
-        int counter = _dayOne.GetCounter(); 
+        int counter = _dayOne.GetResults(); 
         _ = _dayOne.GetNewDialPointerValue("L100", currentPosition);
-        counter = _dayOne.GetCounter();
-        Assert.That(_dayOne.GetCounter(), Is.EqualTo(2));
+        counter = _dayOne.GetResults();
+        Assert.That(_dayOne.GetResults(), Is.EqualTo(2));
     }
     
     [Test]
@@ -72,7 +72,7 @@ public class DayOneTests
         int currentPosition = StartingPosition;
         currentPosition = _dayOne.GetNewDialPointerValue("R50", currentPosition);
         _ = _dayOne.GetNewDialPointerValue("R100", currentPosition);
-        Assert.That(_dayOne.GetCounter(), Is.EqualTo(2));
+        Assert.That(_dayOne.GetResults(), Is.EqualTo(2));
     }
     
     [Test]
@@ -81,7 +81,7 @@ public class DayOneTests
         int currentPosition = StartingPosition;
         currentPosition = _dayOne.GetNewDialPointerValue("L50", currentPosition);
         _ = _dayOne.GetNewDialPointerValue("L400", currentPosition);
-        Assert.That(_dayOne.GetCounter(), Is.EqualTo(5));
+        Assert.That(_dayOne.GetResults(), Is.EqualTo(5));
     }
     
     [Test]
@@ -90,7 +90,7 @@ public class DayOneTests
         int currentPosition = StartingPosition;
         currentPosition = _dayOne.GetNewDialPointerValue("L50", currentPosition);
         _ = _dayOne.GetNewDialPointerValue("R400", currentPosition);
-        Assert.That(_dayOne.GetCounter(), Is.EqualTo(5));
+        Assert.That(_dayOne.GetResults(), Is.EqualTo(5));
     }
 
     [Test]
@@ -98,6 +98,6 @@ public class DayOneTests
     {
         int currentPosition = StartingPosition;
         _ = _dayOne.GetNewDialPointerValue("R1000", currentPosition);
-        Assert.That(_dayOne.GetCounter(), Is.EqualTo(10));
+        Assert.That(_dayOne.GetResults(), Is.EqualTo(10));
     }
 }

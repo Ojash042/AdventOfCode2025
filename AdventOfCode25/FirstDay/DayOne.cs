@@ -5,14 +5,14 @@ namespace AdventOfCode25.FirstDay;
 
 public record DayOneInput(string Document, int StartingPosition);
 
-public class DayOne : ISolutions
+public class DayOne : ISolutions<int>
 {
     private const int MaxDialValue = 100;
     private int _counter; 
     private Part _part;
     private DayOneInput? _inputData;
     
-    public int GetCounter()
+    public int GetResults()
     {
         return _counter;
     }
