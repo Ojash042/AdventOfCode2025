@@ -1,12 +1,14 @@
-﻿namespace AdventOfCode25;
+﻿using AdventOfCode25.SecondDay;
 
-using FirstDay;
+namespace AdventOfCode25;
+
 internal static class Program
 {
     private static void Main()
     {
-        var dayOnePartOne = new DayOne();
-        dayOnePartOne.SetInputData(DataType.RealData);
-        dayOnePartOne.Solve(Part.Two);
+        var solution = new DayTwo();
+        solution.SetInputData(DataType.RealData);
+        solution.Solve(Part.Two);
+        Console.WriteLine(solution.GetResults());
     }
 }

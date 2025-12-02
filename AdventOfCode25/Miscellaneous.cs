@@ -19,3 +19,14 @@ public enum DataType
     TestData,
     RealData
 }
+
+public static class Services
+{
+    public static IEnumerable<Int128> EnumerateLargeIntegerRange(Int128 min, Int128 max)
+    {
+        for (var i = min; i <= max; i++)
+        {
+            yield return i;
+        }
+    }
+}
