@@ -1,6 +1,5 @@
 using Microsoft.Extensions.Configuration;
 
-
 namespace AdventOfCode25.FirstDay;
 
 public record DayOneInput(string Document, int StartingPosition);
@@ -83,8 +82,6 @@ public class DayOne : ISolutions<int>
         int newPosition = _inputData!.StartingPosition ;
         string[] lines = _inputData.Document.Split('\n');
         _ = lines.Aggregate(newPosition, (current, line) => GetNewDialPointerValue(line, current));
-        
-        Console.WriteLine(_counter);
     }
     
     public void Solve(Part part = Part.One)
@@ -94,4 +91,3 @@ public class DayOne : ISolutions<int>
         RetrievePassword();
     }
 }
-
