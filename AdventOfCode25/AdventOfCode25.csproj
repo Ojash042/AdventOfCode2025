@@ -21,6 +21,10 @@
             <_Parameter1>$(MSBuildProjectName).Test</_Parameter1>
         </AssemblyAttribute>
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Solutions\" />
+    </ItemGroup>
     
     <Target Name="CopyJsonFilesToBuild" AfterTargets="Build">
         <Copy SourceFiles="@(JsonFiles)"
