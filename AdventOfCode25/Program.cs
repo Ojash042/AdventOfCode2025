@@ -1,4 +1,4 @@
-﻿using AdventOfCode25.Solutions.SecondDay;
+﻿using AdventOfCode25.Solutions.ThirdDay;
 
 namespace AdventOfCode25;
 
@@ -6,9 +6,20 @@ internal static class Program
 {
     private static void Main()
     {
-        var solution = new DayTwo();
-        solution.SetInputData(DataType.RealData);
-        solution.Solve(Part.Two);
-        Console.WriteLine(solution.GetResults());
+        var solution = new DayThree();
+        const DataType dataType = DataType.RealData;
+        const Part part = Part.Two;
+        solution.SetInputData(dataType);
+        solution.Solve(part);
+        
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("Final Result: ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write(solution.GetResults());
+            Console.ResetColor();
+            Console.WriteLine();    
+        }
+        
     }
 }
