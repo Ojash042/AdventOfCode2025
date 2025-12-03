@@ -2,7 +2,6 @@ using Microsoft.Extensions.Configuration;
 
 namespace AdventOfCode25.Solutions;
 
-internal record DayTwoInput(string Ranges);
 
 public class DayTwo : ISolutions<Int128>
 {

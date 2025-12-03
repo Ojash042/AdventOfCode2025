@@ -2,7 +2,6 @@ using Microsoft.Extensions.Configuration;
 
 namespace AdventOfCode25.Solutions;
 
-public record DayOneInput(string Document, int StartingPosition);
 
 public class DayOne : ISolutions<int>
 {

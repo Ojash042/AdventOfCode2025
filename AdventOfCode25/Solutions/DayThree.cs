@@ -2,7 +2,6 @@ using Microsoft.Extensions.Configuration;
 
 namespace AdventOfCode25.Solutions;
 
-internal record DayThreeInput(string Banks);
 
 public class DayThree : ISolutions<long>
 {

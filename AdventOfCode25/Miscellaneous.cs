@@ -1,5 +1,11 @@
 namespace AdventOfCode25;
 
+
+internal record DayOneInput(string Document, int StartingPosition);
+internal record DayTwoInput(string Ranges);
+internal record DayThreeInput(string Banks);
+
+
 public interface ISolutions<out T>
 {
     public T GetResults();
