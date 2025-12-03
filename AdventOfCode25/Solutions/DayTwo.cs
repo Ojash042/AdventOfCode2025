@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 
-namespace AdventOfCode25.Solutions.SecondDay;
+namespace AdventOfCode25.Solutions;
 
 internal record DayTwoInput(string Ranges);
 
