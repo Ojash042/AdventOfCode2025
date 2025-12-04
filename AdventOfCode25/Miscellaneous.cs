@@ -10,7 +10,7 @@ public interface ISolutions<out T>
 {
     public T GetResults();
     public void SetInputData(DataType dataType);
-    public void Solve(Part part = Part.One){}
+    public void Solve(Part part = Part.One);
 }
 
 public enum Part
