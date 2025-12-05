@@ -7,6 +7,8 @@ internal record DayThreeInput(string Banks);
 
 internal record DayFourInput(string RollArrangement);
 
+internal record DayFiveInput(string Ranges, string Ingredients);
+
 public interface ISolutions<out T>
 {
     public T GetResults();
@@ -31,6 +33,14 @@ public static class Services
     public static IEnumerable<Int128> EnumerateLargeIntegerRange(Int128 min, Int128 max)
     {
         for (var i = min; i <= max; i++)
+        {
+            yield return i;
+        }
+    }
+    
+    public static IEnumerable<long> EnumerateLargeIntegerRange(long min, long max)
+    {
+        for (long i = min; i <= max; i++)
         {
             yield return i;
         }
