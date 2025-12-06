@@ -4,10 +4,9 @@ namespace AdventOfCode25;
 internal record DayOneInput(string Document, int StartingPosition);
 internal record DayTwoInput(string Ranges);
 internal record DayThreeInput(string Banks);
-
 internal record DayFourInput(string RollArrangement);
-
 internal record DayFiveInput(string Ranges, string Ingredients);
+internal record DaySixInput(string Arithmetic);
 
 public interface ISolutions<out T>
 {
