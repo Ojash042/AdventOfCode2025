@@ -7,6 +7,8 @@ internal record DayThreeInput(string Banks);
 internal record DayFourInput(string RollArrangement);
 internal record DayFiveInput(string Ranges, string Ingredients);
 internal record DaySixInput(string Arithmetic);
+internal record DaySevenInput(string TachyonManifold);
+
 
 public interface ISolutions<out T>
 {

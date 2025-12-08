@@ -6,7 +6,7 @@ internal static class Program
 {
     private static void Main()
     {
-        var solution = new DaySix();
+        var solution = new DaySeven();
         const DataType dataType = DataType.RealData;
         const Part part = Part.Two;
         solution.SetInputData(dataType);
