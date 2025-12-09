@@ -1,3 +1,6 @@
+using System.Data;
+using Microsoft.VisualBasic.CompilerServices;
+
 namespace AdventOfCode25;
 
 
@@ -8,7 +11,7 @@ internal record DayFourInput(string RollArrangement);
 internal record DayFiveInput(string Ranges, string Ingredients);
 internal record DaySixInput(string Arithmetic);
 internal record DaySevenInput(string TachyonManifold);
-
+internal record DayEightInput(string JunctionPosition);
 
 public interface ISolutions<out T>
 {
@@ -45,5 +48,34 @@ public static class Services
         {
             yield return i;
         }
+    }
+}
+
+public static class Extensions
+{
+    public static long Product(this List<int> source)
+    {
+        int partitionPoint = source.Count / 2;
+        return source.Count switch
+        {
+            1 => source.First(),
+            2 => source.First() * source.Last(),
+            _ => Product(source[..partitionPoint]) * Product(source[(partitionPoint )..])
+        };
+    }
+
+
+    public static Int128 GetDistance(this Dictionary<(int, int), Int128> source, int row, int col)
+    {
+        int min = Math.Min(row, col);
+        int max = Math.Max(row, col);
+        return source[(min, max)] ;
+    }
+    public static Dictionary<(int, int), long> SetDistance(this Dictionary<(int, int), long> source, int row, int col, long value)
+    {
+        int min = Math.Min(row, col);
+        int max = Math.Max(row, col);
+        source[(min, max)] = value;
+        return source;
     }
 }
